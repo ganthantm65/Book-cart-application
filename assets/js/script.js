@@ -60,14 +60,14 @@ const validateData = async (header) => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
+        console.log(result);
         
         if (result.success) {
             window.location.href = "http://localhost/library/main.html";
             sessionStorage.setItem("user",result.user)
             sessionStorage.setItem('cart',result.cartno)
         } else {
-            alert(result);
-            console.log(result.message);
+            alert(result.message);
         }
     } catch (error) {
         alert("Error in log in");

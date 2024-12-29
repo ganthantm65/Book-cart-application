@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (password_verify($password, $row['password'])) {
                 session_start();
                 $_SESSION['user'] = $row['user'];
-                echo json_encode(["success" => true, "user" => $row['user'],"cartno"=>$row['cartno'],"message"=>"Login successfully"]);
+                echo json_encode(["success" => true, "user" => $row['user'],"message"=>"Login successfully"]);
             } else {
                 echo json_encode(["success" => false,"message"=>"Invalid password"]);
             }

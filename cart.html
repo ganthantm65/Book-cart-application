@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./assets/js/main.js?v=1.0" defer></script>
     <link rel="stylesheet" href="./assets/css/main.css?v=1.0">
+    <script src="./assets/js/cart.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,10 +17,6 @@
             </button>
         </div>
         <div>
-            <button class="cart">
-                Your Cart
-                <i class="fa-solid fa-cart-shopping"></i>
-            </button>
             <div class="dropdown">
                 <button class="user"></button>
                 <div class="dropdown-content">
@@ -31,36 +27,24 @@
               
         </div>
     </nav>
-    <div class="banner">        
-        <div class="welcome-bar">
-            <h1 class="heading"></h1>
+    <div class="cart_body">
+        <div class="cart_div">
+            <h1>Cart Items</h1>
+            <div class="cart_items">
+                <div class="cart_head">
+                    <h3>Name of product</h3>
+                    <h3>Quatity</h3>
+                    <h3>Amount</h3>
+                </div>
+            </div><hr>
+            <div class="cart_total">
+            </div>
+            <div class="cart_options">
+                <button class="remove">Remove all</button>
+                <button class="continue">Continue shopping</button>
+            </div>
         </div>
-    </div> 
-    <div class="body">
-        <h2 class="genre-1">Biography</h2>
-        <div class="biography">
-        </div>
-        <h2 class="genre-2">Programming</h2>
-        <div class="programming">
-        </div>
-        <h2 class="genre-3">Comic</h2>
-        <div class="comic">
-        </div>
-        <h2 class="genre-4">Graphic Novel</h2>
-        <div class="fiction">
-        </div>
-    </div>
-    <div class="popup">
-        <button class="close-popup">X</button>
-        <div class="popup-container">
-            <img src="" width="200px" class="popup-image">
-        <div class="popup-content">
-            <h1></h1>
-            <h2></h2>
-            <h3></h3>
-            <h4></h4>
-            <h5></h5>
-        </div>
+        <div class="cart_bill">
         </div>
     </div>
     <div class="footer">

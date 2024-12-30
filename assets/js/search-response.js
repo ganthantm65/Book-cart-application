@@ -24,7 +24,6 @@ if (user) {
                             <p>Genre:${response[index].genre}</p>
                             <p>Author:${response[0].author}</p>
                             <p>Price:${response[0].price}</p>
-                            <button>Add to cart</button>
                         </div>
                    </div>`;
         elements+=child;

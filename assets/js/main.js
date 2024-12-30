@@ -155,7 +155,7 @@ if (user) {
                 }
     
                 const book = { bookname, price, description, author, publication, quantity };
-                let cartitems = JSON.parse(sessionStorage.getItem('cartitems')) || [];
+                let cartitems = JSON.parse(localStorage.getItem('cartitems')) || [];
     
                 let existingBook = cartitems.find(item => item.cart_item.bookname === bookname);
                 if (existingBook) {
@@ -168,12 +168,14 @@ if (user) {
                     cartitems.push(cart);
                 }
     
-                sessionStorage.setItem('cartitems', JSON.stringify(cartitems));
+                localStorage.setItem('cartitems', JSON.stringify(cartitems));
                 alert('Book added to the cart!');
             }
         });
     });
-    
+    document.querySelector('.cart').addEventListener("click",()=>{
+        window.location.href='http://localhost/library/cart.html'
+    })
     document.querySelector('.close-popup').addEventListener('click', () => {
         document.querySelector('.popup').style.display = 'none';
     });
